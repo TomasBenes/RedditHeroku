@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body th:href="@{/register}">
+<h1>Welcome to the Reddit</h1>
+<p>Please provide a username and password:</p>
+<form id="register" th:action="@{/register}" method="POST">
+    <label for="register">UserName: <input type="text" placeholder="...your username" name="username">
+    </label>
+    <label for="register">Password: <input type="password" placeholder="...your password" name="password">
+    </label>
+    <button type="submit">GO</button>
+</form><br>
+<li><a th:href="@{'/login'}">Login page</a></li>
+</body>
+</html>
